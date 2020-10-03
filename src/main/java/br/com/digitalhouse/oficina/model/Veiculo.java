@@ -103,8 +103,10 @@ public class Veiculo {
 		return true;
 	}
 
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Veiculo [id=" + id + ", placa=" + placa + ", cor=" + cor + ", modelo=" + modelo + ", marca=" + marca
+				+ "]";
+	}
 	
 }

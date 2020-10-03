@@ -22,7 +22,7 @@ import br.com.digitalhouse.oficina.service.ClienteService;
 @RequestMapping("/clientes")
 public class ClienteResource {
 	
-private final ClienteService clienteService;
+	private final ClienteService clienteService;
 	
 	@Autowired
 	public ClienteResource(ClienteService clienteService) {
@@ -44,7 +44,7 @@ private final ClienteService clienteService;
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Cliente> findById(@PathVariable Long id, @RequestBody Cliente cliente) {
+	public ResponseEntity<Cliente> updateById(@PathVariable Long id, @RequestBody Cliente cliente) {
 		cliente.setId(id);
 		
 		this.clienteService.update(cliente);
